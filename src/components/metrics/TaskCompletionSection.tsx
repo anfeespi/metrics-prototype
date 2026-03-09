@@ -1,5 +1,5 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
-import { TaskCompletion } from '../../types';
+import type { TaskCompletion } from '../../types';
 import { SectionHeader } from '../shared/SectionHeader';
 
 function timeAgo(dateStr: string): string {

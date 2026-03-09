@@ -1,4 +1,4 @@
-import { TimeRange } from '../../types';
+import type { TimeRange } from '../../types';
 
 interface HeaderProps {
   timeRange: TimeRange;

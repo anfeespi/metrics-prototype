@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, BarChart, Bar, Cell } from 'recharts';
-import { TimeToValue } from '../../types';
+import type { TimeToValue } from '../../types';
 import { SectionHeader } from '../shared/SectionHeader';
 import { KpiCard } from '../shared/KpiCard';
 

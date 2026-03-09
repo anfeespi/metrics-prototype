@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { Bot } from '../../types';
+import type { Bot } from '../../types';
 
 interface SidebarProps {
   bots: Bot[];

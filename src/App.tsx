@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TimeRange } from './types';
+import type { TimeRange } from './types';
 import { bots, mockData } from './data/mock';
 import { Sidebar } from './components/layout/Sidebar';
 import { Header } from './components/layout/Header';

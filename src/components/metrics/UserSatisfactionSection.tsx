@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, BarChart, Bar, Cell } from 'recharts';
-import { UserSatisfaction } from '../../types';
+import type { UserSatisfaction } from '../../types';
 import { SectionHeader } from '../shared/SectionHeader';
 
 const TOOLTIP_STYLE = { backgroundColor: '#161d35', border: '1px solid #2a3459', borderRadius: 8, color: '#e2e8f0', fontSize: 12 };

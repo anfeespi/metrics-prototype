@@ -1,5 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { UsageRate } from '../../types';
+import type { UsageRate } from '../../types';
 import { SectionHeader } from '../shared/SectionHeader';
 import { KpiCard } from '../shared/KpiCard';
 

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { EstimatedCost } from '../../types';
+import type { EstimatedCost } from '../../types';
 import { SectionHeader } from '../shared/SectionHeader';
 
 function CostInput({ label, value, onChange, prefix }: { label: string; value: number; onChange: (v: number) => void; prefix: string }) {

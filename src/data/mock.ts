@@ -1,4 +1,4 @@
-import { Bot, BotMetrics, MockData } from '../types';
+import type { Bot, BotMetrics, MockData } from '../types';
 
 export const bots: Bot[] = [
   { id: 'on-call-guardian', name: 'On-Call Guardian', type: 'AI Agent', active: true },
