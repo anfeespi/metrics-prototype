@@ -9,8 +9,10 @@ export interface Bot {
 
 export interface UsageRate {
   uniqueUsers: number;
-  byTeam: { team: string; users: number }[];
-  byChannel: { channel: string; users: number }[];
+  invocations: number;
+  topUsers: { user: string; calls: number }[];
+  byTeam: { team: string; users: number; invocations: number }[];
+  byChannel: { channel: string; users: number; invocations: number }[];
 }
 
 export interface OpenTicket {

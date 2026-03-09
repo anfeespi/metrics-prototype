@@ -26,7 +26,7 @@ export function TimeToValueSection({ data }: { data: TimeToValue }) {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="date" tick={{ fill: '#94a3b8', fontSize: 11 }} tickFormatter={(v) => v.slice(5)} />
               <YAxis tick={{ fill: '#94a3b8', fontSize: 11 }} domain={['dataMin - 1', 'dataMax + 1']} />
-              <Tooltip contentStyle={TOOLTIP_STYLE} />
+              <Tooltip contentStyle={TOOLTIP_STYLE} labelStyle={{ color: '#e2e8f0' }} itemStyle={{ color: '#e2e8f0' }} />
               <Line type="monotone" dataKey="avgMinutes" stroke="#3b82f6" strokeWidth={2} dot={{ fill: '#3b82f6', r: 3 }} />
             </LineChart>
           </ResponsiveContainer>
@@ -37,7 +37,7 @@ export function TimeToValueSection({ data }: { data: TimeToValue }) {
             <BarChart data={data.distribution} margin={{ top: 4, right: 16, bottom: 4, left: 0 }}>
               <XAxis dataKey="range" tick={{ fill: '#94a3b8', fontSize: 11 }} />
               <YAxis tick={{ fill: '#94a3b8', fontSize: 11 }} />
-              <Tooltip contentStyle={TOOLTIP_STYLE} />
+              <Tooltip contentStyle={TOOLTIP_STYLE} labelStyle={{ color: '#e2e8f0' }} itemStyle={{ color: '#e2e8f0' }} />
               <Bar dataKey="count" radius={[4, 4, 0, 0]} barSize={40}>
                 {data.distribution.map((_, i) => <Cell key={i} fill={DIST_COLORS[i]} />)}
               </Bar>

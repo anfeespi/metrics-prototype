@@ -40,7 +40,7 @@ export function UserSatisfactionSection({ data }: { data: UserSatisfaction }) {
             <BarChart data={data.distribution} layout="vertical" margin={{ left: 0, right: 0, top: 0, bottom: 0 }}>
               <XAxis type="number" hide />
               <YAxis type="category" dataKey="label" width={70} tick={{ fill: '#94a3b8', fontSize: 12 }} axisLine={false} tickLine={false} />
-              <Tooltip contentStyle={TOOLTIP_STYLE} />
+              <Tooltip contentStyle={TOOLTIP_STYLE} labelStyle={{ color: '#e2e8f0' }} itemStyle={{ color: '#e2e8f0' }} />
               <Bar dataKey="count" radius={[0, 4, 4, 0]} barSize={18}>
                 {data.distribution.map((entry, i) => <Cell key={i} fill={SENTIMENT_COLORS[entry.color]} />)}
               </Bar>
@@ -57,7 +57,7 @@ export function UserSatisfactionSection({ data }: { data: UserSatisfaction }) {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="date" tick={{ fill: '#94a3b8', fontSize: 11 }} tickFormatter={(v) => v.slice(5)} />
               <YAxis tick={{ fill: '#94a3b8', fontSize: 11 }} domain={[0, 100]} />
-              <Tooltip contentStyle={TOOLTIP_STYLE} />
+              <Tooltip contentStyle={TOOLTIP_STYLE} labelStyle={{ color: '#e2e8f0' }} itemStyle={{ color: '#e2e8f0' }} />
               <Line type="monotone" dataKey="score" stroke="#22c55e" strokeWidth={2} dot={{ fill: '#22c55e', r: 3 }} />
             </LineChart>
           </ResponsiveContainer>
