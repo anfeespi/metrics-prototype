@@ -3,10 +3,10 @@ import type { Bot, BotMetrics, MockData } from '../types';
 export const bots: Bot[] = [
   { id: 'on-call-guardian', name: 'On-Call Guardian', type: 'AI Agent', active: true },
   { id: 'ai-concierge', name: 'AI Concierge (Yuno)', type: 'AI Agent', active: true },
+  { id: 'tam-agent', name: 'TAM Agent (Maia)', type: 'AI Agent', active: true },
   { id: 'sentinel', name: 'Sentinel', type: 'AI Agent', active: true },
   { id: 'partnerships-agent', name: 'Partnerships Agent', type: 'AI Agent', active: true },
   { id: 'feature-request-bot', name: 'Feature Request Bot', type: 'AI Agent', active: true },
-  { id: 'tam-agent', name: 'TAM Agent', type: 'AI Agent', active: true },
   { id: 'personal-assistant', name: 'Personal Assistant (x20)', type: 'Personal Assistant', active: true },
   { id: 'roz-finance', name: 'Roz Finance Agent', type: 'AI Agent (In Dev)', active: false },
 ];
