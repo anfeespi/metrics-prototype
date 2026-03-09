@@ -9,9 +9,9 @@ interface SidebarProps {
 
 export function Sidebar({ bots, selectedBotId, onSelectBot }: SidebarProps) {
   return (
-    <aside className="w-64 min-w-64 bg-navy-900 border-r border-navy-700 h-screen overflow-y-auto flex flex-col">
-      <div className="p-4 border-b border-navy-700">
-        <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Agents</h2>
+    <aside className="w-64 min-w-64 bg-yuno-card border-r border-yuno-border/40 h-screen overflow-y-auto flex flex-col">
+      <div className="p-4 border-b border-yuno-border/40">
+        <h2 className="text-xs font-semibold text-yuno-muted uppercase tracking-wider">Agents</h2>
       </div>
       <nav className="flex-1 p-2 space-y-1">
         {bots.map((bot) => (
@@ -21,18 +21,18 @@ export function Sidebar({ bots, selectedBotId, onSelectBot }: SidebarProps) {
             className={clsx(
               'w-full text-left px-3 py-2.5 rounded-lg transition-colors',
               selectedBotId === bot.id
-                ? 'bg-electric-500/15 text-electric-400 border border-electric-500/30'
-                : 'text-slate-300 hover:bg-navy-800 border border-transparent'
+                ? 'bg-yuno-blue-light text-yuno-blue border border-yuno-blue/20'
+                : 'text-yuno-text hover:bg-yuno-bg border border-transparent'
             )}
           >
             <div className="flex items-center gap-2">
               <span className={clsx(
                 'w-2 h-2 rounded-full flex-shrink-0',
-                bot.active ? 'bg-accent-green' : 'bg-slate-500'
+                bot.active ? 'bg-accent-green' : 'bg-yuno-muted'
               )} />
               <div className="min-w-0">
                 <p className="text-sm font-medium truncate">{bot.name}</p>
-                <p className="text-xs text-slate-500">{bot.type}</p>
+                <p className="text-xs text-yuno-muted">{bot.type}</p>
               </div>
             </div>
           </button>

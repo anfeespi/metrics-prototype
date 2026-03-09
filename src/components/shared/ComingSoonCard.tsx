@@ -5,12 +5,12 @@ interface ComingSoonCardProps {
 
 export function ComingSoonCard({ title, description }: ComingSoonCardProps) {
   return (
-    <div className="rounded-xl bg-navy-800/50 border border-navy-700/50 p-8 text-center opacity-60">
-      <span className="inline-block px-3 py-1 rounded-full bg-navy-700 text-slate-400 text-xs font-medium mb-4">
+    <div className="yuno-card p-8 text-center opacity-60">
+      <span className="inline-block px-3 py-1 rounded-full bg-yuno-bg text-yuno-muted text-xs font-medium mb-4">
         Coming Soon
       </span>
-      <h2 className="text-lg font-semibold text-slate-400 mb-2">{title}</h2>
-      <p className="text-sm text-slate-500 max-w-md mx-auto">{description}</p>
+      <h2 className="text-lg font-semibold text-yuno-muted mb-2" style={{ fontFamily: "'Outfit', sans-serif" }}>{title}</h2>
+      <p className="text-sm text-yuno-muted max-w-md mx-auto">{description}</p>
     </div>
   );
 }

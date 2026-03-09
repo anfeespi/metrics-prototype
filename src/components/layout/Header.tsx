@@ -13,24 +13,24 @@ const ranges: { value: TimeRange; label: string }[] = [
 
 export function Header({ timeRange, onTimeRangeChange }: HeaderProps) {
   return (
-    <header className="h-14 bg-navy-900 border-b border-navy-700 flex items-center justify-between px-6 flex-shrink-0">
+    <header className="h-14 bg-yuno-card border-b border-yuno-border/40 flex items-center justify-between px-6 flex-shrink-0">
       <div className="flex items-center gap-3">
-        <h1 className="text-base font-semibold text-white">AI Agents Metrics</h1>
-        <span className="text-xs text-slate-500">Yuno Payments</span>
+        <h1 className="text-base font-semibold text-yuno-text" style={{ fontFamily: "'Outfit', sans-serif" }}>AI Agents Metrics</h1>
+        <span className="text-xs text-yuno-muted">Yuno Payments</span>
       </div>
       <div className="flex items-center gap-4">
-        <span className="text-xs text-slate-500">
+        <span className="text-xs text-yuno-muted">
           {new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })}
         </span>
-        <div className="flex bg-navy-800 rounded-lg p-0.5 border border-navy-700">
+        <div className="flex bg-yuno-bg rounded-lg p-0.5 border border-yuno-border/40">
           {ranges.map((r) => (
             <button
               key={r.value}
               onClick={() => onTimeRangeChange(r.value)}
               className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
                 timeRange === r.value
-                  ? 'bg-electric-500 text-white'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-yuno-blue text-white'
+                  : 'text-yuno-muted hover:text-yuno-text'
               }`}
             >
               {r.label}

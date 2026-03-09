@@ -6,8 +6,8 @@ interface SectionHeaderProps {
 export function SectionHeader({ title, description }: SectionHeaderProps) {
   return (
     <div className="mb-4">
-      <h2 className="text-lg font-semibold text-white">{title}</h2>
-      <p className="text-sm text-slate-400">{description}</p>
+      <h2 className="text-lg font-semibold text-yuno-text" style={{ fontFamily: "'Outfit', sans-serif" }}>{title}</h2>
+      <p className="text-sm text-yuno-muted">{description}</p>
     </div>
   );
 }
