@@ -18,7 +18,7 @@ type MetricsView = 'general' | 'specific';
 export default function App() {
   const [selectedBotId, setSelectedBotId] = useState(bots[0].id);
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
-  const [view, setView] = useState<MetricsView>('general');
+  const [view, setView] = useState<MetricsView>('specific');
 
   const metrics = mockData[timeRange][selectedBotId];
   const agentSpecific = agentSpecificMockData[timeRange][selectedBotId];
@@ -26,7 +26,7 @@ export default function App() {
 
   const handleSelectBot = (id: string) => {
     setSelectedBotId(id);
-    setView('general');
+    setView('specific');
   };
 
   return (
@@ -47,19 +47,6 @@ export default function App() {
           {agentSpecific && (
             <div className="flex gap-1 mb-6 border-b border-yuno-border">
               <button
-                onClick={() => setView('general')}
-                className={`px-4 py-2 text-sm font-medium transition-colors relative ${
-                  view === 'general'
-                    ? 'text-yuno-text'
-                    : 'text-yuno-muted hover:text-yuno-text'
-                }`}
-              >
-                General Metrics
-                {view === 'general' && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3e4fe0] rounded-full" />
-                )}
-              </button>
-              <button
                 onClick={() => setView('specific')}
                 className={`px-4 py-2 text-sm font-medium transition-colors relative ${
                   view === 'specific'
@@ -69,6 +56,19 @@ export default function App() {
               >
                 Agent-Specific Metrics
                 {view === 'specific' && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3e4fe0] rounded-full" />
+                )}
+              </button>
+              <button
+                onClick={() => setView('general')}
+                className={`px-4 py-2 text-sm font-medium transition-colors relative ${
+                  view === 'general'
+                    ? 'text-yuno-text'
+                    : 'text-yuno-muted hover:text-yuno-text'
+                }`}
+              >
+                General Metrics
+                {view === 'general' && (
                   <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3e4fe0] rounded-full" />
                 )}
               </button>
