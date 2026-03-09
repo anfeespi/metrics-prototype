@@ -28,7 +28,7 @@ export function TicketTriageSection({ data }: { data: TicketTriage }) {
           <p className="text-sm text-yuno-muted mb-3">Resolution Breakdown</p>
           <ResponsiveContainer width="100%" height={220}>
             <PieChart>
-              <Pie data={resolutionPie} cx="50%" cy="50%" innerRadius={50} outerRadius={80} dataKey="value" label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`} style={{ fontSize: 11 }}>
+              <Pie data={resolutionPie} cx="50%" cy="50%" innerRadius={50} outerRadius={80} dataKey="value" label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`} style={{ fontSize: 11 }}>
                 {resolutionPie.map((_, i) => <Cell key={i} fill={resolutionColors[i]} />)}
               </Pie>
               <Tooltip contentStyle={TOOLTIP_STYLE} labelStyle={TOOLTIP_LABEL} itemStyle={TOOLTIP_ITEM} />
@@ -55,7 +55,7 @@ export function TicketTriageSection({ data }: { data: TicketTriage }) {
           <p className="text-sm text-yuno-muted mb-3">Tickets by Type</p>
           <ResponsiveContainer width="100%" height={220}>
             <PieChart>
-              <Pie data={data.byType} cx="50%" cy="50%" innerRadius={50} outerRadius={80} dataKey="count" nameKey="type" label={({ type, percent }) => `${type} ${(percent * 100).toFixed(0)}%`} style={{ fontSize: 11 }}>
+              <Pie data={data.byType} cx="50%" cy="50%" innerRadius={50} outerRadius={80} dataKey="count" nameKey="type" label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`} style={{ fontSize: 11 }}>
                 {data.byType.map((_, i) => <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />)}
               </Pie>
               <Tooltip contentStyle={TOOLTIP_STYLE} labelStyle={TOOLTIP_LABEL} itemStyle={TOOLTIP_ITEM} />

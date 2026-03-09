@@ -2,7 +2,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 
 import type { ProactiveAlerts } from '../../../../types/agentSpecific';
 import { SectionHeader } from '../../../shared/SectionHeader';
 import { KpiCard } from '../../../shared/KpiCard';
-import { TOOLTIP_STYLE, TOOLTIP_LABEL, TOOLTIP_ITEM, CURSOR_STYLE, COLORS, AXIS_TICK, PIE_COLORS } from '../../../shared/chartConstants';
+import { TOOLTIP_STYLE, TOOLTIP_LABEL, TOOLTIP_ITEM, CURSOR_STYLE, AXIS_TICK, PIE_COLORS } from '../../../shared/chartConstants';
 
 export function ProactiveAlertsSection({ data }: { data: ProactiveAlerts }) {
   return (

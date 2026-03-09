@@ -15,7 +15,7 @@ export function DataSourceUsageSection({ data }: { data: DataSourceUsage }) {
           <p className="text-sm text-yuno-muted mb-3">Query Source Breakdown</p>
           <ResponsiveContainer width="100%" height={220}>
             <PieChart>
-              <Pie data={data.sources} cx="50%" cy="50%" innerRadius={50} outerRadius={80} dataKey="queries" nameKey="name" label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`} style={{ fontSize: 11 }}>
+              <Pie data={data.sources} cx="50%" cy="50%" innerRadius={50} outerRadius={80} dataKey="queries" nameKey="name" label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`} style={{ fontSize: 11 }}>
                 {data.sources.map((_, i) => <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />)}
               </Pie>
               <Tooltip contentStyle={TOOLTIP_STYLE} labelStyle={TOOLTIP_LABEL} itemStyle={TOOLTIP_ITEM} />
